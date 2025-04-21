@@ -1,0 +1,161 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\C#\\Form\\Frm_login_HW1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2EE3AB45-E165-40EB-A3CE-3EC0FBB70539}|Frm_login_HW1\\Frm_login_HW1.csproj|d:\\c#\\form\\frm_login_hw1\\frm_login_hw1\\product\\frmaddproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EE3AB45-E165-40EB-A3CE-3EC0FBB70539}|Frm_login_HW1\\Frm_login_HW1.csproj|solutionrelative:frm_login_hw1\\product\\frmaddproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EE3AB45-E165-40EB-A3CE-3EC0FBB70539}|Frm_login_HW1\\Frm_login_HW1.csproj|D:\\C#\\Form\\Frm_login_HW1\\frm_login_hw1\\product\\frmproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EE3AB45-E165-40EB-A3CE-3EC0FBB70539}|Frm_login_HW1\\Frm_login_HW1.csproj|solutionrelative:frm_login_hw1\\product\\frmproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EE3AB45-E165-40EB-A3CE-3EC0FBB70539}|Frm_login_HW1\\Frm_login_HW1.csproj|D:\\C#\\Form\\Frm_login_HW1\\frm_login_hw1\\product\\clsproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EE3AB45-E165-40EB-A3CE-3EC0FBB70539}|Frm_login_HW1\\Frm_login_HW1.csproj|solutionrelative:frm_login_hw1\\product\\clsproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EE3AB45-E165-40EB-A3CE-3EC0FBB70539}|Frm_login_HW1\\Frm_login_HW1.csproj|D:\\C#\\Form\\Frm_login_HW1\\frm_login_hw1\\product\\frmproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2EE3AB45-E165-40EB-A3CE-3EC0FBB70539}|Frm_login_HW1\\Frm_login_HW1.csproj|solutionrelative:frm_login_hw1\\product\\frmproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EE3AB45-E165-40EB-A3CE-3EC0FBB70539}|Frm_login_HW1\\Frm_login_HW1.csproj|D:\\C#\\Form\\Frm_login_HW1\\frm_login_hw1\\product\\frmaddproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2EE3AB45-E165-40EB-A3CE-3EC0FBB70539}|Frm_login_HW1\\Frm_login_HW1.csproj|solutionrelative:frm_login_hw1\\product\\frmaddproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EE3AB45-E165-40EB-A3CE-3EC0FBB70539}|Frm_login_HW1\\Frm_login_HW1.csproj|D:\\C#\\Form\\Frm_login_HW1\\frm_login_hw1\\order status\\frmorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EE3AB45-E165-40EB-A3CE-3EC0FBB70539}|Frm_login_HW1\\Frm_login_HW1.csproj|solutionrelative:frm_login_hw1\\order status\\frmorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EE3AB45-E165-40EB-A3CE-3EC0FBB70539}|Frm_login_HW1\\Frm_login_HW1.csproj|D:\\C#\\Form\\Frm_login_HW1\\frm_login_hw1\\order status\\frmorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2EE3AB45-E165-40EB-A3CE-3EC0FBB70539}|Frm_login_HW1\\Frm_login_HW1.csproj|solutionrelative:frm_login_hw1\\order status\\frmorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EE3AB45-E165-40EB-A3CE-3EC0FBB70539}|Frm_login_HW1\\Frm_login_HW1.csproj|D:\\C#\\Form\\Frm_login_HW1\\frm_login_hw1\\order status\\frmorderstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EE3AB45-E165-40EB-A3CE-3EC0FBB70539}|Frm_login_HW1\\Frm_login_HW1.csproj|solutionrelative:frm_login_hw1\\order status\\frmorderstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EE3AB45-E165-40EB-A3CE-3EC0FBB70539}|Frm_login_HW1\\Frm_login_HW1.csproj|D:\\C#\\Form\\Frm_login_HW1\\frm_login_hw1\\order status\\frmorderstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2EE3AB45-E165-40EB-A3CE-3EC0FBB70539}|Frm_login_HW1\\Frm_login_HW1.csproj|solutionrelative:frm_login_hw1\\order status\\frmorderstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "frmOrder.cs",
+              "DocumentMoniker": "D:\\C#\\Form\\Frm_login_HW1\\Frm_login_HW1\\Order Status\\frmOrder.cs",
+              "RelativeDocumentMoniker": "Frm_login_HW1\\Order Status\\frmOrder.cs",
+              "ToolTip": "D:\\C#\\Form\\Frm_login_HW1\\Frm_login_HW1\\Order Status\\frmOrder.cs",
+              "RelativeToolTip": "Frm_login_HW1\\Order Status\\frmOrder.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAUwFoAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T07:08:24.653Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "frmOrder.cs [Design]",
+              "DocumentMoniker": "D:\\C#\\Form\\Frm_login_HW1\\Frm_login_HW1\\Order Status\\frmOrder.cs",
+              "RelativeDocumentMoniker": "Frm_login_HW1\\Order Status\\frmOrder.cs",
+              "ToolTip": "D:\\C#\\Form\\Frm_login_HW1\\Frm_login_HW1\\Order Status\\frmOrder.cs [Design]",
+              "RelativeToolTip": "Frm_login_HW1\\Order Status\\frmOrder.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T07:08:22.183Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "frmOrderStatus.cs",
+              "DocumentMoniker": "D:\\C#\\Form\\Frm_login_HW1\\Frm_login_HW1\\Order Status\\frmOrderStatus.cs",
+              "RelativeDocumentMoniker": "Frm_login_HW1\\Order Status\\frmOrderStatus.cs",
+              "ToolTip": "D:\\C#\\Form\\Frm_login_HW1\\Frm_login_HW1\\Order Status\\frmOrderStatus.cs",
+              "RelativeToolTip": "Frm_login_HW1\\Order Status\\frmOrderStatus.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABkAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T06:48:48.279Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "frmOrderStatus.cs [Design]",
+              "DocumentMoniker": "D:\\C#\\Form\\Frm_login_HW1\\Frm_login_HW1\\Order Status\\frmOrderStatus.cs",
+              "RelativeDocumentMoniker": "Frm_login_HW1\\Order Status\\frmOrderStatus.cs",
+              "ToolTip": "D:\\C#\\Form\\Frm_login_HW1\\Frm_login_HW1\\Order Status\\frmOrderStatus.cs [Design]",
+              "RelativeToolTip": "Frm_login_HW1\\Order Status\\frmOrderStatus.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T06:48:46.34Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "clsProduct.cs",
+              "DocumentMoniker": "D:\\C#\\Form\\Frm_login_HW1\\Frm_login_HW1\\Product\\clsProduct.cs",
+              "RelativeDocumentMoniker": "Frm_login_HW1\\Product\\clsProduct.cs",
+              "ToolTip": "D:\\C#\\Form\\Frm_login_HW1\\Frm_login_HW1\\Product\\clsProduct.cs",
+              "RelativeToolTip": "Frm_login_HW1\\Product\\clsProduct.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAqwF8AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T06:41:15.485Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FrmProduct.cs",
+              "DocumentMoniker": "D:\\C#\\Form\\Frm_login_HW1\\Frm_login_HW1\\Product\\FrmProduct.cs",
+              "RelativeDocumentMoniker": "Frm_login_HW1\\Product\\FrmProduct.cs",
+              "ToolTip": "D:\\C#\\Form\\Frm_login_HW1\\Frm_login_HW1\\Product\\FrmProduct.cs",
+              "RelativeToolTip": "Frm_login_HW1\\Product\\FrmProduct.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAIwDAAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T06:36:53.075Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FrmProduct.cs [Design]",
+              "DocumentMoniker": "D:\\C#\\Form\\Frm_login_HW1\\Frm_login_HW1\\Product\\FrmProduct.cs",
+              "RelativeDocumentMoniker": "Frm_login_HW1\\Product\\FrmProduct.cs",
+              "ToolTip": "D:\\C#\\Form\\Frm_login_HW1\\Frm_login_HW1\\Product\\FrmProduct.cs [Design]",
+              "RelativeToolTip": "Frm_login_HW1\\Product\\FrmProduct.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T06:36:51.104Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmAddProduct.cs",
+              "DocumentMoniker": "D:\\C#\\Form\\Frm_login_HW1\\Frm_login_HW1\\Product\\frmAddProduct.cs",
+              "RelativeDocumentMoniker": "Frm_login_HW1\\Product\\frmAddProduct.cs",
+              "ToolTip": "D:\\C#\\Form\\Frm_login_HW1\\Frm_login_HW1\\Product\\frmAddProduct.cs",
+              "RelativeToolTip": "Frm_login_HW1\\Product\\frmAddProduct.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAwwAMAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T06:35:22.219Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmAddProduct.cs [Design]",
+              "DocumentMoniker": "D:\\C#\\Form\\Frm_login_HW1\\Frm_login_HW1\\Product\\frmAddProduct.cs",
+              "RelativeDocumentMoniker": "Frm_login_HW1\\Product\\frmAddProduct.cs",
+              "ToolTip": "D:\\C#\\Form\\Frm_login_HW1\\Frm_login_HW1\\Product\\frmAddProduct.cs [Design]",
+              "RelativeToolTip": "Frm_login_HW1\\Product\\frmAddProduct.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T06:35:17.779Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
