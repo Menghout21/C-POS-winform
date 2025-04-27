@@ -15,8 +15,10 @@ namespace NIT_G2
     internal class ClsHelper
     {
         public static Form activeForm = null;
-        static string conString = "data source = DESKTOP-T92IFPO\\SQLEXPRESS ; database=ComputerShop_db; integrated security = true";
+        string machineName = Environment.MachineName;
+        static string conString = $"data source={Environment.MachineName}\\SQLEXPRESS; database=ComputerShop_db; integrated security=true";
         public static SqlConnection con = new SqlConnection(conString);
+
         public static void ExecuteQueries(string Query_)
         {
             SqlCommand cmd = new SqlCommand(Query_, con);

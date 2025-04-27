@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using NIT_G2;
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace Frm_login_HW1
@@ -29,25 +25,56 @@ namespace Frm_login_HW1
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string username = txtUsername.Text;
-            string password = txtPassword.Text;
-            string usernamedb = "hout";
-            string passworddb = "2468";
+            string username = txtUsername.Text.Trim();
+            string password = txtPassword.Text.Trim();
+            string usernameStatic = "super_admin";
+            string passwordStatic = "@123$$$";
 
-            if(usernamedb == username &&  passworddb == password)
+            // First check static login for super_admin
+            if (username == usernameStatic && password == passwordStatic)
             {
                 new FrmMain().Show();
                 this.Hide();
+                return;
             }
-            else
+
+            string userRole = string.Empty;
+
+            try
             {
-                MessageBox.Show("Incorrect Username Or password!!");
+                ClsHelper.con.Open();
+                string sql = "SELECT Role FROM [User] WHERE UserName = @username AND Password = @password";
+
+                using (SqlCommand cmd = new SqlCommand(sql, ClsHelper.con))
+                {
+                    cmd.Parameters.AddWithValue("@username", username);
+                    cmd.Parameters.AddWithValue("@password", password);
+
+                    new FrmMain().Show();
+                    this.Hide();
+                }
+
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                if (ClsHelper.con.State == ConnectionState.Open)
+                    ClsHelper.con.Close();
             }
         }
 
         private void FrmLogin_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void FrmLogin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

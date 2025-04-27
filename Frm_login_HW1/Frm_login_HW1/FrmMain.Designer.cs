@@ -29,22 +29,19 @@
         private void InitializeComponent()
         {
             this.pnlNavbar = new System.Windows.Forms.Panel();
-            this.btnPayment = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.btnProduct = new System.Windows.Forms.Button();
-            this.btnCustomer = new System.Windows.Forms.Button();
             this.btnEmployee = new System.Windows.Forms.Button();
             this.btnPos = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.btnCategory = new System.Windows.Forms.Button();
             this.pnlHeader = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnlBody = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.pnlNavbar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlHeader.SuspendLayout();
@@ -56,35 +53,34 @@
             this.pnlNavbar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.pnlNavbar.BackColor = System.Drawing.Color.LightGray;
-            this.pnlNavbar.Controls.Add(this.button1);
-            this.pnlNavbar.Controls.Add(this.btnPayment);
+            this.pnlNavbar.Controls.Add(this.button2);
             this.pnlNavbar.Controls.Add(this.label4);
             this.pnlNavbar.Controls.Add(this.label3);
             this.pnlNavbar.Controls.Add(this.pictureBox1);
             this.pnlNavbar.Controls.Add(this.btnDashboard);
             this.pnlNavbar.Controls.Add(this.btnProduct);
-            this.pnlNavbar.Controls.Add(this.btnCustomer);
             this.pnlNavbar.Controls.Add(this.btnEmployee);
             this.pnlNavbar.Controls.Add(this.btnPos);
             this.pnlNavbar.Controls.Add(this.button6);
             this.pnlNavbar.Controls.Add(this.btnCategory);
             this.pnlNavbar.Location = new System.Drawing.Point(0, 0);
             this.pnlNavbar.Name = "pnlNavbar";
-            this.pnlNavbar.Size = new System.Drawing.Size(233, 600);
+            this.pnlNavbar.Size = new System.Drawing.Size(233, 634);
             this.pnlNavbar.TabIndex = 0;
-            this.pnlNavbar.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlNavbar_Paint);
             // 
-            // btnPayment
+            // button2
             // 
-            this.btnPayment.BackColor = System.Drawing.Color.Gold;
-            this.btnPayment.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPayment.Location = new System.Drawing.Point(10, 389);
-            this.btnPayment.Name = "btnPayment";
-            this.btnPayment.Size = new System.Drawing.Size(208, 37);
-            this.btnPayment.TabIndex = 15;
-            this.btnPayment.Text = "Payment";
-            this.btnPayment.UseVisualStyleBackColor = false;
-            this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.button2.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button2.Image = global::Frm_login_HW1.Properties.Resources._340__1_;
+            this.button2.Location = new System.Drawing.Point(12, 586);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(206, 37);
+            this.button2.TabIndex = 17;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label4
             // 
@@ -116,7 +112,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // btnDashboard
             // 
@@ -141,29 +136,17 @@
             this.btnProduct.TabIndex = 10;
             this.btnProduct.Text = "Product";
             this.btnProduct.UseVisualStyleBackColor = false;
-            this.btnProduct.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // btnCustomer
-            // 
-            this.btnCustomer.BackColor = System.Drawing.Color.Gold;
-            this.btnCustomer.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCustomer.Location = new System.Drawing.Point(11, 303);
-            this.btnCustomer.Name = "btnCustomer";
-            this.btnCustomer.Size = new System.Drawing.Size(208, 37);
-            this.btnCustomer.TabIndex = 8;
-            this.btnCustomer.Text = "Customer";
-            this.btnCustomer.UseVisualStyleBackColor = false;
-            this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
+            this.btnProduct.Click += new System.EventHandler(this.btnProduct_Click_1);
             // 
             // btnEmployee
             // 
             this.btnEmployee.BackColor = System.Drawing.Color.Gold;
             this.btnEmployee.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmployee.Location = new System.Drawing.Point(10, 346);
+            this.btnEmployee.Location = new System.Drawing.Point(12, 303);
             this.btnEmployee.Name = "btnEmployee";
             this.btnEmployee.Size = new System.Drawing.Size(208, 37);
             this.btnEmployee.TabIndex = 7;
-            this.btnEmployee.Text = "Employee";
+            this.btnEmployee.Text = "Users";
             this.btnEmployee.UseVisualStyleBackColor = false;
             this.btnEmployee.Click += new System.EventHandler(this.btnEmployee_Click);
             // 
@@ -185,7 +168,7 @@
             this.button6.BackColor = System.Drawing.Color.Red;
             this.button6.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button6.Location = new System.Drawing.Point(11, 538);
+            this.button6.Location = new System.Drawing.Point(10, 543);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(208, 37);
             this.button6.TabIndex = 5;
@@ -210,24 +193,11 @@
             this.pnlHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlHeader.BackColor = System.Drawing.Color.LightGray;
-            this.pnlHeader.Controls.Add(this.label2);
             this.pnlHeader.Controls.Add(this.pictureBox2);
             this.pnlHeader.Location = new System.Drawing.Point(232, 0);
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(663, 74);
             this.pnlHeader.TabIndex = 0;
-            this.pnlHeader.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlHeader_Paint);
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(567, 32);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 13);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Admin";
             // 
             // pictureBox2
             // 
@@ -248,26 +218,14 @@
             this.pnlBody.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.pnlBody.Location = new System.Drawing.Point(232, 72);
             this.pnlBody.Name = "pnlBody";
-            this.pnlBody.Size = new System.Drawing.Size(663, 528);
+            this.pnlBody.Size = new System.Drawing.Size(663, 562);
             this.pnlBody.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Gold;
-            this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(12, 432);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(208, 37);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Order Status";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(895, 601);
+            this.ClientSize = new System.Drawing.Size(895, 635);
             this.Controls.Add(this.pnlBody);
             this.Controls.Add(this.pnlHeader);
             this.Controls.Add(this.pnlNavbar);
@@ -279,7 +237,6 @@
             this.pnlNavbar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlHeader.ResumeLayout(false);
-            this.pnlHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
@@ -289,21 +246,18 @@
 
         private System.Windows.Forms.Panel pnlNavbar;
         private System.Windows.Forms.Panel pnlHeader;
-        private System.Windows.Forms.Panel pnlBody;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button btnCategory;
         private System.Windows.Forms.Button btnProduct;
-        private System.Windows.Forms.Button btnCustomer;
         private System.Windows.Forms.Button btnEmployee;
         private System.Windows.Forms.Button btnPos;
         private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnPayment;
-        private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Panel pnlBody;
+        private System.Windows.Forms.Button button2;
     }
 }
 

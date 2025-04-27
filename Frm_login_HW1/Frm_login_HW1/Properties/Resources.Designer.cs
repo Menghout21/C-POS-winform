@@ -63,9 +63,59 @@ namespace Frm_login_HW1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1828817 {
+            get {
+                object obj = ResourceManager.GetObject("1828817", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1829586__1_ {
+            get {
+                object obj = ResourceManager.GetObject("1829586 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _340__1_ {
+            get {
+                object obj = ResourceManager.GetObject("340 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _585e4bf3cb11b227491c339a {
             get {
                 object obj = ResourceManager.GetObject("585e4bf3cb11b227491c339a", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap add__1_ {
+            get {
+                object obj = ResourceManager.GetObject("add (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap default_image {
+            get {
+                object obj = ResourceManager.GetObject("default_image", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,6 +143,16 @@ namespace Frm_login_HW1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap images {
+            get {
+                object obj = ResourceManager.GetObject("images", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap MH_HM_logo_design_vector_Graphics_17227024_1 {
             get {
                 object obj = ResourceManager.GetObject("MH-HM-logo-design-vector-Graphics-17227024-1", resourceCulture);
@@ -106,6 +166,16 @@ namespace Frm_login_HW1.Properties {
         internal static System.Drawing.Bitmap MH_HM_logo_design_vector_Graphics_17227024_1_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("MH-HM-logo-design-vector-Graphics-17227024-1-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap resized_button_icon {
+            get {
+                object obj = ResourceManager.GetObject("resized_button_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

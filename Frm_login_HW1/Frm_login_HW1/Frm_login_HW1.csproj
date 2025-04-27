@@ -152,6 +152,7 @@
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -163,6 +164,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BorderRadiusHelper.cs" />
     <Compile Include="Category\FrmAddCategory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +190,7 @@
     <Compile Include="Dashboard\FrmDashboard.Designer.cs">
       <DependentUpon>FrmDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Employee\clsUser.cs" />
     <Compile Include="Employee\FrmEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,37 +209,31 @@
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Order Status\clsOrderStatus.cs" />
-    <Compile Include="Order Status\frmOrder.cs">
+    <Compile Include="POSNew\clsInvoice.cs" />
+    <Compile Include="POSNew\clsInvoiceDetail.cs" />
+    <Compile Include="POSNew\FrmPos2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Order Status\frmOrder.Designer.cs">
-      <DependentUpon>frmOrder.cs</DependentUpon>
+    <Compile Include="POSNew\FrmPos2.Designer.cs">
+      <DependentUpon>FrmPos2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Order Status\frmOrderStatus.cs">
-      <SubType>Form</SubType>
+    <Compile Include="POSNew\Item.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Order Status\frmOrderStatus.Designer.cs">
-      <DependentUpon>frmOrderStatus.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Payment\clsPaymentMethod.cs" />
-    <Compile Include="Payment\frmPayment.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Payment\frmPayment.Designer.cs">
-      <DependentUpon>frmPayment.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Payment\frmPaymentMethod.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Payment\frmPaymentMethod.Designer.cs">
-      <DependentUpon>frmPaymentMethod.cs</DependentUpon>
+    <Compile Include="POSNew\Item.Designer.cs">
+      <DependentUpon>Item.cs</DependentUpon>
     </Compile>
     <Compile Include="POS\FrmPos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="POS\FrmPos.Designer.cs">
       <DependentUpon>FrmPos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POS\ProductItemControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="POS\ProductItemControl.Designer.cs">
+      <DependentUpon>ProductItemControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Product\clsProduct.cs" />
     <Compile Include="Product\frmAddProduct.cs">
@@ -274,20 +271,17 @@
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Order Status\frmOrder.resx">
-      <DependentUpon>frmOrder.cs</DependentUpon>
+    <EmbeddedResource Include="POSNew\FrmPos2.resx">
+      <DependentUpon>FrmPos2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Order Status\frmOrderStatus.resx">
-      <DependentUpon>frmOrderStatus.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Payment\frmPayment.resx">
-      <DependentUpon>frmPayment.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Payment\frmPaymentMethod.resx">
-      <DependentUpon>frmPaymentMethod.cs</DependentUpon>
+    <EmbeddedResource Include="POSNew\Item.resx">
+      <DependentUpon>Item.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="POS\FrmPos.resx">
       <DependentUpon>FrmPos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POS\ProductItemControl.resx">
+      <DependentUpon>ProductItemControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Product\frmAddProduct.resx">
       <DependentUpon>frmAddProduct.cs</DependentUpon>
@@ -305,6 +299,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -337,7 +332,27 @@
   <ItemGroup>
     <None Include="Resources\icons8-add-50.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\default_image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1828817.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resized_button_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\340 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1829586 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('..\packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -1,4 +1,5 @@
 ﻿using Frm_login_HW1.Dashboard;
+using Frm_login_HW1.POS;
 using NIT_G2;
 using System;
 using System.Collections.Generic;
@@ -11,20 +12,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Frm_login_HW1.POS
+namespace Frm_login_HW1.POSNew
 {
-    public partial class FrmPos : Form
+    public partial class FrmPos2 : Form
     {
-        public FrmPos()
+        public FrmPos2()
         {
             InitializeComponent();
         }
 
-        private void FrmPos_Load(object sender, EventArgs e)
+        private void FrmPos2_Load(object sender, EventArgs e)
         {
-            getListCategory();
-            getListProduct(0);
-
+            getcategory();
+            getProduct(0);
 
             if (!dataGridView1.Columns.Contains("btnRemove"))
             {
@@ -36,88 +36,79 @@ namespace Frm_login_HW1.POS
                 btn.UseColumnTextForButtonValue = true;
             }
         }
-
-        // Method to get category list and display as buttons
-        // Method to get category list and display as buttons
-        public void getListCategory()
+        public void getcategory()
         {
             try
             {
-                // Clear previous buttons
-                pCategory.Controls.Clear();
-
                 DataTable dt = new DataTable();
                 string sql = "SELECT Id, Name FROM [Category]";
                 dt = ClsHelper.getTable(sql);
-
                 if (dt != null)
                 {
-                    Button btnAll = new Button();
-                    btnAll.Text = "All";
-                    btnAll.Tag = 0;
-                    btnAll.Height = 50;
-                    btnAll.Width = 100;
-                    btnAll.Font = new Font("Segoe UI", 11, FontStyle.Bold);
-                    btnAll.Margin = new Padding(5);
-                    btnAll.Click += btnAll_Click;
-
-                    pCategory.Controls.Add(btnAll);
-
                     foreach (DataRow dr in dt.Rows)
                     {
                         Button btn = new Button();
                         btn.Text = dr["Name"].ToString().ToUpper();
                         btn.Tag = dr["Id"].ToString();
-                        btn.Height = 50;
-                        btn.Width = 100;
-                        btn.Font = new Font("Segoe UI", 14, FontStyle.Bold);
-                        btn.Margin = new Padding(5);
+                        btn.Height = 60;
+                        btn.Width = 50;
+                        btn.Dock = DockStyle.Top;
+                        btn.Font = new Font("Bahnschrift", 11, FontStyle.Bold);
                         btn.Click += btn_Click;
                         pCategory.Controls.Add(btn);
                     }
-                }
 
-                pCategory.Refresh();  // Ensure the panel is refreshed after loading categories
+                    // Create the "All" button
+                    Button btnAll = new Button();
+                    btnAll.Text = "All";
+                    btnAll.Tag = 0;
+                    btnAll.Height = 60;
+                    btnAll.Width = 50;
+                    btnAll.Dock = DockStyle.Top;
+                    btnAll.Font = new Font("Bahnschrift", 11, FontStyle.Bold);
+                    btnAll.Click += btnAll_Click;
+                    pCategory.Controls.Add(btnAll);
+
+                    // Trigger the btnAll click manually
+                    btnAll.PerformClick();
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error loading categories: " + ex.Message);
+                MessageBox.Show(ex.ToString());
             }
         }
 
-
-        // Method to get product list based on selected category
-        // Method to get product list based on selected category
-        public void getListProduct(int CategoryId)
+        public void getProduct(int CategoryId)
         {
             try
             {
-                tableLayoutPanel1.Controls.Clear();  // Clear previous products
-
+                tableLayoutPanel1.Controls.Clear();
                 DataTable dt = new DataTable();
                 string sql = "SELECT * FROM Product";
                 if (CategoryId != 0)
                 {
                     sql += " WHERE CategoryId = " + CategoryId;
                 }
-
-                Console.WriteLine("Executing SQL: " + sql);  // Debugging SQL query
-
                 dt = ClsHelper.getTable(sql);
-
-                if (dt != null && dt.Rows.Count == 0)
-                {
-                    MessageBox.Show("No products found for the selected category.");
-                }
 
                 if (dt != null)
                 {
                     foreach (DataRow dr in dt.Rows)
                     {
-                        ProductItemControl pItem = new ProductItemControl();
-                        pItem.lbName.Text = dr["Name"].ToString();
-                        pItem.lbDescription.Text = dr["Description"].ToString();
-                        pItem.lbPrice.Text = "$ " + dr["Price"].ToString();
+                        //Button btn = new Button();
+                        //btn.Text = dr["Name"].ToString().ToUpper();
+                        //btn.Tag = dr["Id"].ToString();
+                        //btn.Height = 60;
+                        //btn.Width = 50;
+                        //btn.Dock = DockStyle.Fill;
+                        //btn.Font = new Font("Bahnschrift", 11, FontStyle.Bold);
+                        //btn.Click += btn_Click;
+                        //tableLayoutPanel1.Controls.Add(btn);
+                        Item pItem = new Item();
+                        pItem.txtName.Text = dr["Name"].ToString();
+                        pItem.txtDescription.Text = dr["Description"].ToString();
+                        pItem.txtPrice.Text = "$ " + dr["Price"].ToString();
 
                         if (dr["Image"] != DBNull.Value && !string.IsNullOrEmpty(dr["Image"].ToString()))
                         {
@@ -139,58 +130,31 @@ namespace Frm_login_HW1.POS
                         pItem.Dock = DockStyle.Fill;
                         tableLayoutPanel1.Controls.Add(pItem);
                     }
+
                 }
 
-                // After loading products -> update button style
-                foreach (Control ctrl in pCategory.Controls)
-                {
-                    if (ctrl is Button btn)
-                    {
-                        if (btn.Tag != null && btn.Tag.ToString() == CategoryId.ToString())
-                        {
-                            // Highlight the selected button
-                            btn.BackColor = Color.LightBlue;
-                        }
-                        else
-                        {
-                            // Reset others
-                            btn.BackColor = SystemColors.Control;
-                        }
-                    }
-                }
 
-                tableLayoutPanel1.Refresh();  // Refresh the table layout panel
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error loading product list: " + ex.Message);
+                MessageBox.Show(ex.ToString());
             }
         }
-
-
-        // Handle category button click
         private void btn_Click(object sender, EventArgs e)
         {
             Button btn = sender as Button;
             int Categoryid = int.Parse(btn.Tag.ToString());
+            getProduct(Categoryid);
 
-            Console.WriteLine("CategoryId selected: " + Categoryid);  // Debugging category selection
-
-            getListProduct(Categoryid);
         }
-
-        // Handle "All" category button click
         private void btnAll_Click(object sender, EventArgs e)
         {
             Button btn = sender as Button;
-            Console.WriteLine("CategoryId selected: 0 (All)");  // Debugging "All" selection
+            getProduct(0);
 
-            getListProduct(0);
         }
-
-        // Handle "Back" button click
         private static FrmMain mainFormInstance;
-        private void btnBack_Click(object sender, EventArgs e)
+        private void btnBack_Click_1(object sender, EventArgs e)
         {
             if (mainFormInstance == null || mainFormInstance.IsDisposed)
             {
@@ -201,8 +165,6 @@ namespace Frm_login_HW1.POS
             ClsHelper.openChildForm(mainFormInstance.pnlBody, new FrmDashboard());
             this.Hide();
         }
-
-        // Handle product add to cart
         public void btnAdd_Click(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
@@ -214,27 +176,27 @@ namespace Frm_login_HW1.POS
             double amount = price * qty;
 
             bool isExist = false;
-            foreach (DataGridViewRow row in dataGridView1.Rows)
+            foreach (DataGridViewRow item in dataGridView1.Rows)
             {
-                if (row.IsNewRow) continue;
-                if (row.Cells["Id"].Value.ToString() == dr["Id"].ToString())
+                if (dr["Id"].ToString() == item.Cells["Id"].Value.ToString())
                 {
                     isExist = true;
-                    row.Cells["Qty"].Value = int.Parse(row.Cells["Qty"].Value.ToString()) + 1;
-                    row.Cells["Amount"].Value = (int.Parse(row.Cells["Qty"].Value.ToString()) * price).ToString();
+                    item.Cells["Qty"].Value = int.Parse(item.Cells["Qty"].Value.ToString()) + 1;
+                    item.Cells["Amount"].Value = (int.Parse(item.Cells["Qty"].Value.ToString()) * price).ToString();
                     break;
+                    
                 }
             }
 
             if (!isExist)
             {
                 dataGridView1.Rows.Add(new object[] {
-                    "1",  // Row Number (auto-generated if needed)
+                    "1",  
                     dr["Id"].ToString(),
                     dr["Name"].ToString(),
                     dr["Description"].ToString(),
-                    price.ToString(),
                     qty,
+                    price.ToString(),
                     amount.ToString()
                 });
             }
@@ -242,21 +204,37 @@ namespace Frm_login_HW1.POS
             getTotal();
         }
 
-        // Update total amount in cart
+        private void dataGridView1_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+            this.dataGridView1.Rows[e.RowIndex].Cells["No"].Value = (e.RowIndex + 1);
+        }
+
         public void getTotal()
         {
             double total = 0;
-            foreach (DataGridViewRow dr in dataGridView1.Rows)
+            foreach (DataGridViewRow item in dataGridView1.Rows)
             {
-                if (dr.IsNewRow) continue;
-                double price = double.Parse(dr.Cells["Price"].Value.ToString());
-                int qty = int.Parse(dr.Cells["Qty"].Value.ToString());
-                total += (price * qty);
+                if (item.Cells["Price"].Value != null)
+                {
+
+                    int qty = int.Parse(item.Cells["Qty"].Value.ToString());
+                    double price = double.Parse(item.Cells["Price"].Value.ToString());
+                    total += (qty * price);
+                }
+
             }
-            lbTotal.Text = "$ " + total.ToString("F2");  // Display formatted total
+            txtReciveAmount.Text =  total.ToString("F2");
+            txtTotalAmount.Text = "$ " + total.ToString("F2");
         }
 
-        // Handle remove item button in cart
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Rows.Clear();
+            txtTotalAmount.Clear();
+            txtReciveAmount.Clear();
+            txtChange.Clear();
+        }
+
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             string columnName = this.dataGridView1.Columns[e.ColumnIndex].Name;
@@ -269,7 +247,29 @@ namespace Frm_login_HW1.POS
             }
         }
 
-        // Handle checkout button click
+        private void txtReciveAmount_TextChanged(object sender, EventArgs e)
+        {
+            double total = 0;
+            foreach (DataGridViewRow dr in dataGridView1.Rows)
+            {
+                if (dr.IsNewRow) continue;
+                int qty = int.Parse(dr.Cells["Qty"].Value.ToString());
+                double price = double.Parse(dr.Cells["Price"].Value.ToString());
+                total += (qty * price);
+            }
+
+            double receiveAmount;
+            if (double.TryParse(txtReciveAmount.Text, System.Globalization.NumberStyles.Any, null, out receiveAmount))
+            {
+                double change = receiveAmount - total;
+                txtChange.Text = change.ToString("F2");
+            }
+            else
+            {
+                txtChange.Clear();
+            }
+        }
+
         private void btnCheckOut_Click(object sender, EventArgs e)
         {
             try
@@ -318,31 +318,7 @@ namespace Frm_login_HW1.POS
 
             txtReciveAmount.Clear();
             txtChange.Clear();
-            lbTotal.Text = "0.00";
-        }
-
-        // Update change amount based on received amount
-        private void txtReciveAmount_TextChanged(object sender, EventArgs e)
-        {
-            double total = 0;
-            foreach (DataGridViewRow dr in dataGridView1.Rows)
-            {
-                if (dr.IsNewRow) continue;
-                int qty = int.Parse(dr.Cells["Qty"].Value.ToString());
-                double price = double.Parse(dr.Cells["Price"].Value.ToString());
-                total += (qty * price);
-            }
-
-            double receiveAmount;
-            if (double.TryParse(txtReciveAmount.Text, System.Globalization.NumberStyles.Any, null, out receiveAmount))
-            {
-                double change = receiveAmount - total;
-                txtChange.Text = change.ToString("F2");
-            }
-            else
-            {
-                txtChange.Clear();
-            }
+            txtTotalAmount.Text = "0.00";
         }
     }
 }
