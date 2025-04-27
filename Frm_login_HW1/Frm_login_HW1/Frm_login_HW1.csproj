@@ -209,6 +209,12 @@
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="OrderHistory\FrmOrderHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderHistory\FrmOrderHistory.Designer.cs">
+      <DependentUpon>FrmOrderHistory.cs</DependentUpon>
+    </Compile>
     <Compile Include="POSNew\clsInvoice.cs" />
     <Compile Include="POSNew\clsInvoiceDetail.cs" />
     <Compile Include="POSNew\FrmPos2.cs">
@@ -235,7 +241,6 @@
     <Compile Include="POS\ProductItemControl.Designer.cs">
       <DependentUpon>ProductItemControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Product\clsProduct.cs" />
     <Compile Include="Product\frmAddProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -248,6 +253,8 @@
     <Compile Include="Product\FrmProduct.Designer.cs">
       <DependentUpon>FrmProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="Product\Product.cs" />
+    <Compile Include="Product\ProductRepository.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Category\FrmAddCategory.resx">
@@ -270,6 +277,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderHistory\FrmOrderHistory.resx">
+      <DependentUpon>FrmOrderHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="POSNew\FrmPos2.resx">
       <DependentUpon>FrmPos2.cs</DependentUpon>
@@ -299,6 +309,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

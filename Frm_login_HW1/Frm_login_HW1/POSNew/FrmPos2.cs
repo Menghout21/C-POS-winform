@@ -16,9 +16,11 @@ namespace Frm_login_HW1.POSNew
 {
     public partial class FrmPos2 : Form
     {
+        
         public FrmPos2()
         {
             InitializeComponent();
+            
         }
 
         private void FrmPos2_Load(object sender, EventArgs e)
@@ -42,7 +44,7 @@ namespace Frm_login_HW1.POSNew
             {
                 DataTable dt = new DataTable();
                 string sql = "SELECT Id, Name FROM [Category]";
-                dt = ClsHelper.getTable(sql);
+                dt = ClsHelper.Instance.getTable(sql);
                 if (dt != null)
                 {
                     foreach (DataRow dr in dt.Rows)
@@ -90,7 +92,7 @@ namespace Frm_login_HW1.POSNew
                 {
                     sql += " WHERE CategoryId = " + CategoryId;
                 }
-                dt = ClsHelper.getTable(sql);
+                dt = ClsHelper.Instance.getTable(sql);
 
                 if (dt != null)
                 {
@@ -162,9 +164,11 @@ namespace Frm_login_HW1.POSNew
             }
 
             mainFormInstance.Show();
-            ClsHelper.openChildForm(mainFormInstance.pnlBody, new FrmDashboard());
+            ClsHelper.Instance.openChildForm(mainFormInstance.pnlBody, new FrmDashboard());
             this.Hide();
         }
+
+
         public void btnAdd_Click(object sender, EventArgs e)
         {
             Button btn = (Button)sender;

@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using Frm_login_HW1.Product;
 
 namespace Frm_login_HW1.POS
 {
@@ -45,35 +46,6 @@ namespace Frm_login_HW1.POS
                 }
 
                 return modified;
-
-                //using (SqlCommand cmd = new SqlCommand("INSERT INTO Invoice (UserId,CustomerId,TotalAmount,TotalQty,TotalPaid,DueAmount,Status,IsReturn) OUTPUT INSERTED.ID VALUES (@UserId,@CustomerId,@TotalAmount,@TotalQty,@TotalPaid,@DueAmount,@Status,@IsReturn)", clsHelper.con))
-                //{
-                //    //cmd.Parameters.AddWithValue("@UserId", UserId);
-                //    //cmd.Parameters.AddWithValue("@CustomerId", CustomerId);
-                //    //cmd.Parameters.AddWithValue("@TotalAmount", TotalAmount);
-                //    //cmd.Parameters.AddWithValue("@TotalQty", TotalQty);
-                //    //cmd.Parameters.AddWithValue("@TotalPaid", TotalPaid);
-                //    //cmd.Parameters.AddWithValue("@DueAmount", DueAmount);
-                //    //cmd.Parameters.AddWithValue("@Status", Status);
-                //    //cmd.Parameters.AddWithValue("@IsReturn", IsReturn);
-
-                //    cmd.Parameters.AddWithValue("@UserId", 1);
-                //    cmd.Parameters.AddWithValue("@CustomerId", 1);
-                //    cmd.Parameters.AddWithValue("@TotalAmount", 10);
-                //    cmd.Parameters.AddWithValue("@TotalQty", 1);
-                //    cmd.Parameters.AddWithValue("@TotalPaid", 10);
-                //    cmd.Parameters.AddWithValue("@DueAmount", 0);
-                //    cmd.Parameters.AddWithValue("@Status", "Paid");
-                //    cmd.Parameters.AddWithValue("@IsReturn", false);
-                //    clsHelper.con.Open();
-
-                //    int modified = (int)cmd.ExecuteScalar();
-
-                //    if (clsHelper.con.State == System.Data.ConnectionState.Open)
-                //        clsHelper.con.Close();
-                //    return modified;
-                //}
-
             }
             catch (Exception ex)
             {

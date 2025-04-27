@@ -30,42 +30,48 @@ namespace Frm_login_HW1
             string usernameStatic = "super_admin";
             string passwordStatic = "@123$$$";
 
-            // First check static login for super_admin
-            if (username == usernameStatic && password == passwordStatic)
-            {
-                new FrmMain().Show();
-                this.Hide();
-                return;
-            }
-
-            string userRole = string.Empty;
-
             try
             {
-                ClsHelper.con.Open();
-                string sql = "SELECT Role FROM [User] WHERE UserName = @username AND Password = @password";
+                // ✅ Check static super_admin login
+                if (username == usernameStatic && password == passwordStatic)
+                {
+                    new FrmMain().Show();
+                    this.Hide();
+                    return;
+                }
 
+                // ✅ Check in User table
+                ClsHelper.Open();
+
+                string sql = "SELECT COUNT(1) FROM [User] WHERE UserName = @username AND Password = @password";
                 using (SqlCommand cmd = new SqlCommand(sql, ClsHelper.con))
                 {
                     cmd.Parameters.AddWithValue("@username", username);
                     cmd.Parameters.AddWithValue("@password", password);
 
-                    new FrmMain().Show();
-                    this.Hide();
-                }
+                    int userExists = (int)cmd.ExecuteScalar();
 
-                
+                    if (userExists == 1)
+                    {
+                        new FrmMain().Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid username or password!", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Error: " + ex.Message, "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
-                if (ClsHelper.con.State == ConnectionState.Open)
-                    ClsHelper.con.Close();
+                ClsHelper.Close();
             }
         }
+
 
         private void FrmLogin_Load(object sender, EventArgs e)
         {

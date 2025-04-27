@@ -30,10 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.pnlNavbar = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.btnProduct = new System.Windows.Forms.Button();
             this.btnEmployee = new System.Windows.Forms.Button();
@@ -41,12 +39,15 @@
             this.button6 = new System.Windows.Forms.Button();
             this.btnCategory = new System.Windows.Forms.Button();
             this.pnlHeader = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnlBody = new System.Windows.Forms.Panel();
+            this.btnOrderHistory = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlNavbar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlNavbar
@@ -54,6 +55,7 @@
             this.pnlNavbar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.pnlNavbar.BackColor = System.Drawing.Color.LightGray;
+            this.pnlNavbar.Controls.Add(this.btnOrderHistory);
             this.pnlNavbar.Controls.Add(this.button2);
             this.pnlNavbar.Controls.Add(this.label4);
             this.pnlNavbar.Controls.Add(this.label3);
@@ -68,20 +70,6 @@
             this.pnlNavbar.Name = "pnlNavbar";
             this.pnlNavbar.Size = new System.Drawing.Size(233, 634);
             this.pnlNavbar.TabIndex = 0;
-            // 
-            // button2
-            // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button2.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.Image = global::Frm_login_HW1.Properties.Resources._340__1_;
-            this.button2.Location = new System.Drawing.Point(12, 586);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(206, 37);
-            this.button2.TabIndex = 17;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label4
             // 
@@ -103,16 +91,6 @@
             this.label3.Size = new System.Drawing.Size(139, 26);
             this.label3.TabIndex = 13;
             this.label3.Text = "Computer";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Frm_login_HW1.Properties.Resources.MH_HM_logo_design_vector_Graphics_17227024_1_removebg_preview;
-            this.pictureBox1.Location = new System.Drawing.Point(40, -3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(152, 112);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
             // 
             // btnDashboard
             // 
@@ -200,6 +178,29 @@
             this.pnlHeader.Size = new System.Drawing.Size(663, 74);
             this.pnlHeader.TabIndex = 0;
             // 
+            // pnlBody
+            // 
+            this.pnlBody.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlBody.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.pnlBody.Location = new System.Drawing.Point(232, 72);
+            this.pnlBody.Name = "pnlBody";
+            this.pnlBody.Size = new System.Drawing.Size(663, 562);
+            this.pnlBody.TabIndex = 1;
+            // 
+            // btnOrderHistory
+            // 
+            this.btnOrderHistory.BackColor = System.Drawing.Color.Gold;
+            this.btnOrderHistory.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOrderHistory.Location = new System.Drawing.Point(12, 348);
+            this.btnOrderHistory.Name = "btnOrderHistory";
+            this.btnOrderHistory.Size = new System.Drawing.Size(208, 37);
+            this.btnOrderHistory.TabIndex = 18;
+            this.btnOrderHistory.Text = "OrderHistory";
+            this.btnOrderHistory.UseVisualStyleBackColor = false;
+            this.btnOrderHistory.Click += new System.EventHandler(this.btnOrderHistory_Click);
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -211,16 +212,29 @@
             this.pictureBox2.TabIndex = 13;
             this.pictureBox2.TabStop = false;
             // 
-            // pnlBody
+            // button2
             // 
-            this.pnlBody.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlBody.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.pnlBody.Location = new System.Drawing.Point(232, 72);
-            this.pnlBody.Name = "pnlBody";
-            this.pnlBody.Size = new System.Drawing.Size(663, 562);
-            this.pnlBody.TabIndex = 1;
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.button2.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button2.Image = global::Frm_login_HW1.Properties.Resources._340__1_;
+            this.button2.Location = new System.Drawing.Point(12, 586);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(206, 37);
+            this.button2.TabIndex = 17;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Frm_login_HW1.Properties.Resources.MH_HM_logo_design_vector_Graphics_17227024_1_removebg_preview;
+            this.pictureBox1.Location = new System.Drawing.Point(40, -3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(152, 112);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
             // 
             // FrmMain
             // 
@@ -239,9 +253,9 @@
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.pnlNavbar.ResumeLayout(false);
             this.pnlNavbar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlHeader.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -262,6 +276,7 @@
         private System.Windows.Forms.Label label4;
         public System.Windows.Forms.Panel pnlBody;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnOrderHistory;
     }
 }
 

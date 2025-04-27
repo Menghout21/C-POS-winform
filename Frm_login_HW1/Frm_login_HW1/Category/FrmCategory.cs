@@ -22,7 +22,7 @@ namespace Frm_login_HW1.Category
         {
             FrmAddCategory form= new FrmAddCategory(this);
             form.btnDelete.Visible = false;
-            ClsHelper.setBlurBackground(form);        
+            ClsHelper.Instance.setBlurBackground(form);        
         }
 
         private void FrmCategory_Load(object sender, EventArgs e)
@@ -32,7 +32,7 @@ namespace Frm_login_HW1.Category
         public void getdata()
         {
             string sql = "SELECT *FROM Category";
-            dataGridView1.DataSource = ClsHelper.getTable(sql);
+            dataGridView1.DataSource = ClsHelper.Instance.getTable(sql);
         }
         private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -42,7 +42,7 @@ namespace Frm_login_HW1.Category
             form.txtDescription.Text = dataGridView1.CurrentRow.Cells["Description"].Value.ToString();
             form.cboStatus.Text = (bool.Parse(dataGridView1.CurrentRow.Cells["Status"].Value.ToString())) ? "Active" : "InActive";
             form.btnSave.Text = "Update";
-            ClsHelper.setBlurBackground(form);
+            ClsHelper.Instance.setBlurBackground(form);
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -16,14 +16,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Frm_login_HW1.Product;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using Frm_login_HW1.OrderHistory;
 
 namespace Frm_login_HW1
 {
     public partial class FrmMain : Form
     {
-        //private string userRole;
-
-        // Pass the userRole when opening FrmMain
+        
         public FrmMain()
         {
             InitializeComponent();
@@ -34,45 +33,27 @@ namespace Frm_login_HW1
         private void FrmMain_Load(object sender, EventArgs e)
         {
             // Open the default dashboard form
-            ClsHelper.openChildForm(pnlBody, new FrmDashboard());
+            ClsHelper.Instance.openChildForm(pnlBody, new FrmDashboard());
             //SetRoleBasedVisibility();
         }
 
-        // Activated event (whenever form is brought to front, like after returning from FrmPos)
-        //private void FrmMain_Activated(object sender, EventArgs e)
-        //{
-        //    SetRoleBasedVisibility();
-        //}
-
-        //// Method to handle role-based visibility for buttons
-        //private void SetRoleBasedVisibility()
-        //{
-        //    if (userRole == "Cashier")
-        //    {
-        //        btnEmployee.Visible = false;  // Hide the btnEmployee for Cashier role
-        //    }
-        //    else
-        //    {
-        //        btnEmployee.Visible = true;  // Make sure btnEmployee is visible for other roles
-        //    }
-        //}
 
         // Button click to navigate to employee form
         private void btnEmployee_Click(object sender, EventArgs e)
         {
-            ClsHelper.openChildForm(pnlBody, new FrmEmployee());
+            ClsHelper.Instance.openChildForm(pnlBody, new FrmEmployee());
         }
 
         // Button click to navigate to product form
         private void btnProduct_Click(object sender, EventArgs e)
         {
-            ClsHelper.openChildForm(pnlBody, new FrmProduct());
+            ClsHelper.Instance.openChildForm(pnlBody, new FrmProduct());
         }
 
         // Button click to navigate to category form
         private void btnCategory_Click(object sender, EventArgs e)
         {
-            ClsHelper.openChildForm(pnlBody, new FrmCategory());
+            ClsHelper.Instance.openChildForm(pnlBody, new FrmCategory());
         }
 
         // Button click to navigate to POS form
@@ -85,13 +66,13 @@ namespace Frm_login_HW1
         // Button click to navigate to customer form
         private void btnCustomer_Click(object sender, EventArgs e)
         {
-            ClsHelper.openChildForm(pnlBody, new FrmCustomer());
+            ClsHelper.Instance.openChildForm(pnlBody, new FrmCustomer());
         }
 
         // Button click to navigate to dashboard
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            ClsHelper.openChildForm(pnlBody, new FrmDashboard());
+            ClsHelper.Instance.openChildForm(pnlBody, new FrmDashboard());
         }
 
         // Button click to log out
@@ -124,12 +105,17 @@ namespace Frm_login_HW1
         // Button click to navigate to product form (duplicate event handler, could be removed)
         private void btnProduct_Click_1(object sender, EventArgs e)
         {
-            ClsHelper.openChildForm(pnlBody, new FrmProduct());
+            ClsHelper.Instance.openChildForm(pnlBody, new FrmProduct());
         }
 
         private void FrmMain_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnOrderHistory_Click(object sender, EventArgs e)
+        {
+            ClsHelper.Instance.openChildForm(pnlBody, new FrmOrderHistory());
         }
     }
 }

@@ -219,3 +219,4 @@ D:\C#\Form\C-POS-winform\Frm_login_HW1\Frm_login_HW1\obj\Debug\Frm_login_HW1.pdb
 D:\C#\Form\C-POS-winform\Frm_login_HW1\Frm_login_HW1\obj\Debug\Frm_login_HW1.POS.ProductItemControl.resources
 D:\C#\Form\C-POS-winform\Frm_login_HW1\Frm_login_HW1\obj\Debug\Frm_login_HW1.POSNew.Item.resources
 D:\C#\Form\C-POS-winform\Frm_login_HW1\Frm_login_HW1\obj\Debug\Frm_login_HW1.POSNew.FrmPos2.resources
+D:\C#\Form\C-POS-winform\Frm_login_HW1\Frm_login_HW1\obj\Debug\Frm_login_HW1.OrderHistory.FrmOrderHistory.resources

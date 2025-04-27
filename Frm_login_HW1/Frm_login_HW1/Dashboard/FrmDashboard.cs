@@ -22,7 +22,7 @@ namespace Frm_login_HW1.Dashboard
             BorderRadiusHelper.ApplyBorderRadius(panel2, 10);
         }
 
-        private void LoadDashboardData()
+        public void LoadDashboardData()
         {
             // Get today's sales and total sales
             decimal todaySale = GetTodaySale();

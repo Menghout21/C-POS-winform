@@ -42,7 +42,7 @@ namespace Frm_login_HW1.Employee
             try
             {
                 string SEL = "SELECT * FROM [User]";
-                dataGridView1.DataSource = ClsHelper.getTable(SEL);
+                dataGridView1.DataSource = ClsHelper.Instance.getTable(SEL);
             }
             catch (Exception ex)
             {

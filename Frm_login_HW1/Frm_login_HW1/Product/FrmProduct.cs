@@ -39,7 +39,7 @@ namespace Frm_login_HW1.Product
         public void getdata()
         {
             string sql = "SELECT * FROM Product";
-            dataGridView1.DataSource = ClsHelper.getTable(sql);
+            dataGridView1.DataSource = ClsHelper.Instance.getTable(sql);
             DataGridViewImageColumn Imagecolumn = new DataGridViewImageColumn();
             Imagecolumn = (DataGridViewImageColumn)dataGridView1.Columns["Image"];
             Imagecolumn.ImageLayout = DataGridViewImageCellLayout.Zoom;
@@ -53,7 +53,7 @@ namespace Frm_login_HW1.Product
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            ClsHelper.setBlurBackground(new frmAddProduct(this));
+            ClsHelper.Instance.setBlurBackground(new frmAddProduct(this));
         }
 
         private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -74,7 +74,7 @@ namespace Frm_login_HW1.Product
                     Image img = Image.FromStream(ms);
                     form.pictureBox1.Image = img;
                 }
-                ClsHelper.setBlurBackground(form);
+                ClsHelper.Instance.setBlurBackground(form);
             }
             catch(Exception ex)
             {

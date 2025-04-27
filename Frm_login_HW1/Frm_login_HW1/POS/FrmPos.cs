@@ -48,7 +48,7 @@ namespace Frm_login_HW1.POS
 
                 DataTable dt = new DataTable();
                 string sql = "SELECT Id, Name FROM [Category]";
-                dt = ClsHelper.getTable(sql);
+                dt = ClsHelper.Instance.getTable(sql);
 
                 if (dt != null)
                 {
@@ -103,7 +103,7 @@ namespace Frm_login_HW1.POS
 
                 Console.WriteLine("Executing SQL: " + sql);  // Debugging SQL query
 
-                dt = ClsHelper.getTable(sql);
+                dt = ClsHelper.Instance.getTable(sql);
 
                 if (dt != null && dt.Rows.Count == 0)
                 {
@@ -198,7 +198,7 @@ namespace Frm_login_HW1.POS
             }
 
             mainFormInstance.Show();
-            ClsHelper.openChildForm(mainFormInstance.pnlBody, new FrmDashboard());
+            ClsHelper.Instance.openChildForm(mainFormInstance.pnlBody, new FrmDashboard());
             this.Hide();
         }
 
