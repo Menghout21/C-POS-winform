@@ -45,7 +45,11 @@ namespace Frm_login_HW1.Category
                     cmd.Parameters.AddWithValue("@Id", txtId.Text);
                     cmd.ExecuteNonQuery();
                     ClsHelper.con.Close();
+                    
+
                     MessageBox.Show("Delete Success", "Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                    objFrmload.getdata();
                 }
                 else if (dialogResult == DialogResult.No)
                 {
@@ -121,6 +125,11 @@ namespace Frm_login_HW1.Category
                 MessageBox.Show(ex.ToString());
 
             }
+        }
+
+        private void FrmAddCategory_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

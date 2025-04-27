@@ -36,7 +36,6 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.cboStatus = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -122,16 +121,6 @@
             this.cboStatus.Size = new System.Drawing.Size(349, 29);
             this.cboStatus.TabIndex = 9;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(49, 34);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(31, 21);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "ID:";
-            // 
             // txtId
             // 
             this.txtId.AutoSize = true;
@@ -141,6 +130,7 @@
             this.txtId.Size = new System.Drawing.Size(19, 21);
             this.txtId.TabIndex = 11;
             this.txtId.Text = "0";
+            this.txtId.Visible = false;
             // 
             // FrmAddCategory
             // 
@@ -148,7 +138,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(457, 381);
             this.Controls.Add(this.txtId);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.cboStatus);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnDelete);
@@ -160,6 +149,7 @@
             this.Name = "FrmAddCategory";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddCategory";
+            this.Load += new System.EventHandler(this.FrmAddCategory_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -170,7 +160,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         public System.Windows.Forms.TextBox txtName;
         public System.Windows.Forms.TextBox txtDescription;
         public System.Windows.Forms.ComboBox cboStatus;

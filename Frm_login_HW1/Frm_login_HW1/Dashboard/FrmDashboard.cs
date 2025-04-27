@@ -18,6 +18,8 @@ namespace Frm_login_HW1.Dashboard
         {
             // Load data into the controls
             LoadDashboardData();
+            BorderRadiusHelper.ApplyBorderRadius(panel1, 10);
+            BorderRadiusHelper.ApplyBorderRadius(panel2, 10);
         }
 
         private void LoadDashboardData()

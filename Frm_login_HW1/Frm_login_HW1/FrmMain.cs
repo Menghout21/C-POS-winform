@@ -126,5 +126,10 @@ namespace Frm_login_HW1
         {
             ClsHelper.openChildForm(pnlBody, new FrmProduct());
         }
+
+        private void FrmMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -37,10 +37,10 @@ namespace Frm_login_HW1.Category
         private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             FrmAddCategory form = new FrmAddCategory(this);
-            form.txtId.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            form.txtName.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            form.txtDescription.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            form.cboStatus.Text = (bool.Parse(dataGridView1.CurrentRow.Cells[3].Value.ToString())) ? "Active" : "InActive";
+            form.txtId.Text = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
+            form.txtName.Text = dataGridView1.CurrentRow.Cells["Name"].Value.ToString();
+            form.txtDescription.Text = dataGridView1.CurrentRow.Cells["Description"].Value.ToString();
+            form.cboStatus.Text = (bool.Parse(dataGridView1.CurrentRow.Cells["Status"].Value.ToString())) ? "Active" : "InActive";
             form.btnSave.Text = "Update";
             ClsHelper.setBlurBackground(form);
         }
@@ -48,6 +48,16 @@ namespace Frm_login_HW1.Category
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void dataGridView1_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+            this.dataGridView1.Rows[e.RowIndex].Cells["No"].Value = (e.RowIndex + 1);
+        }
+
+        private void dataGridView1_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            this.dataGridView1.Columns["Id"].Visible = false;
         }
     }
 }

@@ -5,30 +5,19 @@ using System.Windows.Forms;
 
 public static class BorderRadiusHelper
 {
-    public static void ApplyBorderRadius(Control control, int radius, Color borderColor, int borderSize = 1)
+    public static void ApplyBorderRadius(Control control, int radius)
     {
         if (control == null)
             throw new ArgumentNullException(nameof(control));
 
+        // Apply rounded region on Paint
         control.Paint += (sender, e) =>
         {
-            Graphics graphics = e.Graphics;
-            graphics.SmoothingMode = SmoothingMode.AntiAlias;
-
-            Rectangle bounds = new Rectangle(0, 0, control.Width - 1, control.Height - 1);
-            GraphicsPath path = GetRoundedPath(bounds, radius);
-
-            // Draw border only
-            using (Pen pen = new Pen(borderColor, borderSize))
-            {
-                graphics.DrawPath(pen, path);
-            }
-
-            // Apply rounded region
-            control.Region = new Region(path);
+            Rectangle bounds = new Rectangle(0, 0, control.Width, control.Height);
+            control.Region = new Region(GetRoundedPath(bounds, radius));
         };
 
-        // Redraw when resized
+        // Reapply rounded region when resized
         control.Resize += (sender, e) =>
         {
             Rectangle bounds = new Rectangle(0, 0, control.Width, control.Height);
